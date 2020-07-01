@@ -34,14 +34,15 @@ void scanCallback(const sensor_msgs::LaserScan::ConstPtr& scan)
 		else
 		{
 			Frontfile << 6.0;
+		  	Frontfile.close();
 		}
 	}
 
 	if (degree > 0 && degree < 2)
 	{
-	ofstream Backfile;
-	Backfile.open ("Back.txt");
-	B = scan->ranges[i];
+		ofstream Backfile;
+		Backfile.open ("Back.txt");
+		B = scan->ranges[i];
  		if (B >= 0 && B <= 6)
 		{
 			Backfile << B;
@@ -50,14 +51,15 @@ void scanCallback(const sensor_msgs::LaserScan::ConstPtr& scan)
 		else
 		{
 			Backfile << 6.0;
+			Backfile.close();
 		}
 	}
 
 	if (degree > -95  && degree < -93)
 	{
-	ofstream Leftfile;
-	Leftfile.open ("Left.txt");
-	L = scan->ranges[i];
+		ofstream Leftfile;
+		Leftfile.open ("Left.txt");
+		L = scan->ranges[i];
 		if (L >= 0 && L <= 6)
 		{
 			Leftfile << L;
@@ -66,14 +68,15 @@ void scanCallback(const sensor_msgs::LaserScan::ConstPtr& scan)
 		else
 		{
 			Leftfile << 6.0;
+			Leftfile.close();
 		}
 	}
 
 	if (degree > 93  && degree < 95)
 	{
-	ofstream Rightfile;
-	Rightfile.open ("Right.txt");
-	R = scan->ranges[i];
+		ofstream Rightfile;
+		Rightfile.open ("Right.txt");
+		R = scan->ranges[i];
 		if (R >= 0 && R <= 6)
 		{
 			Rightfile << R;
@@ -82,6 +85,7 @@ void scanCallback(const sensor_msgs::LaserScan::ConstPtr& scan)
 		else
 		{
 			Rightfile << 6.0;
+			Rightfile.close();
 		}
 	}
     }
