@@ -31,11 +31,6 @@ void scanCallback(const sensor_msgs::LaserScan::ConstPtr& scan)
 			Frontfile << F;
 		  	Frontfile.close();
 		}
-		else
-		{
-			Frontfile << 6.0;
-		  	Frontfile.close();
-		}
 	}
 
 	if (degree > 0 && degree < 2)
@@ -47,11 +42,6 @@ void scanCallback(const sensor_msgs::LaserScan::ConstPtr& scan)
 		{
 			Backfile << B;
 		  	Backfile.close();
-		}
-		else
-		{
-			Backfile << 6.0;
-			Backfile.close();
 		}
 	}
 
@@ -65,11 +55,6 @@ void scanCallback(const sensor_msgs::LaserScan::ConstPtr& scan)
 			Leftfile << L;
 		  	Leftfile.close();
 		}
-		else
-		{
-			Leftfile << 6.0;
-			Leftfile.close();
-		}
 	}
 
 	if (degree > 93  && degree < 95)
@@ -81,11 +66,6 @@ void scanCallback(const sensor_msgs::LaserScan::ConstPtr& scan)
 		{
 			Rightfile << R;
 		  	Rightfile.close();
-		}
-		else
-		{
-			Rightfile << 6.0;
-			Rightfile.close();
 		}
 	}
     }
