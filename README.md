@@ -1,5 +1,5 @@
 # rplidar_ros
-RP Lidar ROS for indoor flights
+RP Lidar ROS that outputs Lidar distance data to Textfiles
 
 ## Contents
 1. Description
@@ -10,7 +10,7 @@ RP Lidar ROS for indoor flights
 5. Credits and Contact
 
 ## 1. Description
-Lidar code that only extracts data from certain angles and store these datas into a textfile. As range is limited to 6 meters, only datas that falls between 0 meters to 6 meters will be stored.
+Lidar code that only extracts distance data from certain angles and store these datas into a textfile. As range is limited to 6 meters, only datas that falls between 0 meters to 6 meters will be stored.
 
 ## 2. Architecture of Solution
 Not applicable
@@ -26,6 +26,8 @@ Refer to my documentation link
 - RPLidar ROS
 
 ## 6. Credits and Contact
+Full credits goes to: https://github.com/robopeak/rplidar_ros
+
 Feel free to contact me regarding any questions
 
 >>Ian: ianlim0309@gmail.com
